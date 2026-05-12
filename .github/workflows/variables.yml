@@ -19,8 +19,9 @@ jobs:
       - name: Docker Login
         env:
           DOCKER_PASSWORD: 123Pass
-          docker login --username=${DOCKER_USERNAME} \
-                        --password=${DOCKER_PASSWORD}
+        run: |
+           docker login --username=${DOCKER_USERNAME}\
+                       --password=${DOCKER_PASSWORD}
 
       - name: Docker Publish
         run: |
