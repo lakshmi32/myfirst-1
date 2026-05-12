@@ -15,7 +15,7 @@ jobs:
         - name: Execute Cowsay
           run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
-        - name: Verify Output
+        - name: Verify Outpu
           run: grep -i "dragon" dragon.txt
 
         - name: Display the art work
