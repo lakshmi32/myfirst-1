@@ -1,4 +1,4 @@
-name: Multiple jobs Generate Ascii Artwork
+name: Multiple jobs sequence Generate Ascii Artwork
 
 on: push
 
