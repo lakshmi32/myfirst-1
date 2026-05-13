@@ -1,0 +1,31 @@
+name: Context Texting
+on: push
+jobs:
+ dump_contexts_to_log:
+ runs-on: ubuntu-latest
+ steps:
+  - name Dump Git Hub Context
+    env:
+     GITHUB_CONTEXT: ${{ toJSON(github) }}
+     run: echo "$GITHUB_CONTEXT"
+
+  - name: Dumb Job Context
+    env:
+    JOB_CONTENT: ${{ toJSON(Job)}}
+    run: echo "$JOB_CONTENT"
+
+  - name: DUMP Steps Context
+    env: 
+      STEP_CONTENT: ${{ toJSON(steps) }}
+      run: echo "$STEP_CONTENT"
+
+  - name: Dump Runner JOB_CONTENT
+    env:
+    RUNNER_CONTENT: ${{ toJSON(runner) }}
+    run: echo "$RUNNER_CONTENT"
+
+  - name: Dumb Secrets JOB_CONTENT
+    env: 
+    SECRET_CONTENT: ${{ toJSON(secrets) }}
+    echo: run "$SECRET_CONTENT"
+
