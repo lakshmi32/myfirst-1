@@ -14,7 +14,7 @@ jobs:
     JOB_CONTENT: ${{ toJSON(Job)}}
     run: echo "$JOB_CONTENT"
 
-  - name: DUMP Steps Contex
+  - name: DUMP Steps Context
     env: 
       STEP_CONTENT: ${{ toJSON(steps) }}
       run: echo "$STEP_CONTENT"
