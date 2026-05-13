@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest,ubuntu-20.04, windows-2025-vs2026]
         images: [hello-world, alpine]
         exclude:
-         -  os: windows-latest
+         -  os: windows-2025-vs2026
             images: alpine
              
         include:
